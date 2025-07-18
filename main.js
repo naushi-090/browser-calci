@@ -170,3 +170,13 @@ buttonClear.addEventListener("click", clearHandler);
 function clearHandler() {
   outputResult.innerHTML = '';
 }
+
+//backspace
+let buttonBack = document.getElementById("backspace")
+buttonBack.addEventListener("click", backspace);
+
+function backspace() {
+  let originalString = outputResult.innerHTML;
+  let newString = originalString.slice(0, -1);
+  outputResult.innerHTML = newString
+}
